@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
       <div className='headContainer'>
-        <div className='upBar'>barra superior</div>
-        <div>Display</div>
+        <div className='upBar'>React Calulator</div>
+        <div className='display'></div>
       </div>
       <div className='calculatorContainer'>
         <div className='row'>
@@ -44,7 +44,7 @@ function App() {
         </div>
       </div>
       <div className='addBtnContainer'>
-        Boton crear nueva calculadora
+        <button className='btnAdd'>ADD</button>
       </div>
     </div>
   );

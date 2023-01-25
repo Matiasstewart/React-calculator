@@ -1,7 +1,7 @@
 .App {
   height: 100vh;
-  background-color: #1b1b32;
-  font-family: lato, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../public/images/27569.jpg);
+  font-family: system-ui, sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -11,6 +11,9 @@
 
 .headContainer{
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .upBar {
@@ -18,17 +21,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
+}
+
+.display {
+  width: 400px;
+  height: 50px;
+  padding: 14px;
+  background-color: rgb(10, 10, 10);
+  border: 5px solid rgb(133, 131, 131);
+  border-radius: 20px;
+  padding-bottom: 5px;
 }
 
 .calculatorContainer{
   width: 400px;
-  height: 70%;
+  height: 600px;
   padding: 14px;
-  background-color: black;
+  background-color: rgb(10, 10, 10);
   display: flex;
   flex-wrap: wrap;
   border-radius: 20px;
-  border: 5px solid white;
+  border: 5px solid rgb(133, 131, 131);
 }
 
 .row {
@@ -50,25 +64,27 @@
 }
 
 .addBtnContainer{
+  display: flex;
   width: 100%;
-  background-color: gray;
   height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnAdd{
+  background-color: rgb(26, 124, 86);
+  font-size: 30px;
+  height: 70px;
+  width: 150px;
+  border-radius: 20px;
+  border: 5px solid rgb(133, 131, 131);
 }
 
 @media(min-width:480px){
-.calculatorContainer{
-  background-color: red;
-}
 }
 
 @media(min-width:768px){
-  .calculatorContainer{
-    background-color: green;
-  }
 }
 
 @media(min-width:1279px){
-  .calculatorContainer{
-    background-color: orange;
-  }
 }
