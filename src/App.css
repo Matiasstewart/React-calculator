@@ -1,6 +1,5 @@
 .App {
   height: 100vh;
-  padding-top: 10px;
   background-color: #1b1b32;
   font-family: lato, sans-serif;
   display: flex;
@@ -10,10 +9,12 @@
   color: aliceblue;
 }
 
+.headContainer{
+  width: 100%;
+}
+
 .upBar {
   width: 100%;
-  height: 50px;
-  margin: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,16 +22,53 @@
 
 .calculatorContainer{
   width: 400px;
-  height: 600px;
+  height: 70%;
   padding: 14px;
-  background-color: #99c9ff;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 20px;
   border: 5px solid white;
 }
 
 .row {
-  margin: 4px;
+  height: 20%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+
+.zeroContainer {
+  width: 50%;
+}
+
+.equalContainer {
+  display: flex;
+  width: 50%;
+}
+
+.addBtnContainer{
+  width: 100%;
+  background-color: gray;
+  height: 10vh;
+}
+
+@media(min-width:480px){
+.calculatorContainer{
+  background-color: red;
+}
+}
+
+@media(min-width:768px){
+  .calculatorContainer{
+    background-color: green;
+  }
+}
+
+@media(min-width:1279px){
+  .calculatorContainer{
+    background-color: orange;
+  }
 }

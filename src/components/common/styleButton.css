@@ -1,0 +1,29 @@
+.buttonContainer{
+    width: 93px;
+    height: 93px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.extra {
+    background-color: #a0a0a0;
+}
+
+.number {
+    background-color: #313131;
+}
+
+.zero {
+    background-color: #313131;
+    width: 186px;
+    border-radius: 50px;
+}
+
+.operator {
+    background-color: #f69906;
+}
