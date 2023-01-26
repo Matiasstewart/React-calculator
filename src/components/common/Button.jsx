@@ -8,7 +8,7 @@ const Button = ({value}) => {
   }
 
   const isOperator = value =>{
-    return (value==="÷" || value==="X" || value==="-" || value==="+" || value==="=")
+    return (value==="÷" || value==="x" || value==="-" || value==="+" || value==="=")
   }
 
   const isExtra = value => {

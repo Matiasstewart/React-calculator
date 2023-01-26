@@ -1,11 +1,16 @@
 import './App.css';
 import Button from './components/common/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalculator } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <div className="App">
       <div className='headContainer'>
-        <div className='upBar'>React Calulator</div>
+        <div className='title'>
+          <FontAwesomeIcon icon={faCalculator} className="calculatorIcon" />
+          <div className='upBar'>React Calulator</div>
+        </div>
         <div className='display'></div>
       </div>
       <div className='calculatorContainer'>
@@ -19,7 +24,7 @@ function App() {
           <Button value={"7"}></Button>
           <Button value={"8"}></Button>
           <Button value={"9"}></Button>
-          <Button value={"X"}></Button>
+          <Button value={"x"}></Button>
         </div>
         <div className='row'>
           <Button value={"4"}></Button>
