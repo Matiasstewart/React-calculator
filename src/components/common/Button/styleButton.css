@@ -10,12 +10,24 @@
     font-weight: 500;
 }
 
+.buttonContainer:hover{
+    cursor: pointer;
+}
+
 .extra {
     background-color: #a0a0a0;
 }
 
+.extra:hover {
+    background-color: #a0a0a0aa;
+}
+
 .number {
     background-color: #313131;
+}
+
+.number:hover {
+    background-color: #313131aa;
 }
 
 .zero {
@@ -24,6 +36,14 @@
     border-radius: 50px;
 }
 
+.zero:hover {
+    background-color: #313131aa;
+}
+
 .operator {
     background-color: #f69906;
+}
+
+.operator:hover {
+    background-color: #f69906aa;
 }

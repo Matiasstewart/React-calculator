@@ -1,7 +1,7 @@
 import React from 'react'
 import "./styleButton.css"
 
-const Button = ({value}) => {
+const Button = ({value, handdleClick}) => {
 
   const isNumber = value =>{
     return !( (isNaN(value) && (value !== ".")) || (value === "0"));
@@ -19,6 +19,7 @@ const Button = ({value}) => {
   return (
     <div
       className={`buttonContainer ${isNumber(value)? "number" : "" }${value === "0" ? "zero" : ""}${isOperator(value)? "operator" : ""}${isExtra(value)? "extra" : ""}`}
+      onClick={() => handdleClick(value)}
     >
       {value}
     </div>

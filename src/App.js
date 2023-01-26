@@ -1,9 +1,25 @@
 import './App.css';
-import Button from './components/common/Button';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalculator } from '@fortawesome/free-solid-svg-icons';
+import Button from './components/common/Button/Button';
+import Display from './components/common/Display/Display';
+import { useState } from 'react';
+import ButtonAC from './components/common/ButtonAC/ButtonAC';
 
 function App() {
+
+  const [input, setInput] = useState("")
+
+  const addInput = val =>{
+    setInput(input + val)
+  }
+
+  const handdleClear = () =>{
+    setInput("")
+  }
+
+
   return (
     <div className="App">
       <div className='headContainer'>
@@ -11,40 +27,40 @@ function App() {
           <FontAwesomeIcon icon={faCalculator} className="calculatorIcon" />
           <div className='upBar'>React Calulator</div>
         </div>
-        <div className='display'></div>
+        <Display className="display" input={input}/>
       </div>
       <div className='calculatorContainer'>
         <div className='row'>
-          <Button value={"AC"}></Button>
-          <Button value={"±"}></Button>
-          <Button value={"%"}></Button>
-          <Button value={"÷"}></Button>
+          <ButtonAC handdleClear={handdleClear} />
+          <Button value={"±"} handdleClick={addInput}></Button>
+          <Button value={"%"} handdleClick={addInput}></Button>
+          <Button value={"÷"} handdleClick={addInput}></Button>
         </div>
         <div className='row'>
-          <Button value={"7"}></Button>
-          <Button value={"8"}></Button>
-          <Button value={"9"}></Button>
-          <Button value={"x"}></Button>
+          <Button value={"7"} handdleClick={addInput}></Button>
+          <Button value={"8"} handdleClick={addInput}></Button>
+          <Button value={"9"} handdleClick={addInput}></Button>
+          <Button value={"x"} handdleClick={addInput}></Button>
         </div>
         <div className='row'>
-          <Button value={"4"}></Button>
-          <Button value={"5"}></Button>
-          <Button value={"6"}></Button>
-          <Button value={"-"}></Button>
+          <Button value={"4"} handdleClick={addInput}></Button>
+          <Button value={"5"} handdleClick={addInput}></Button>
+          <Button value={"6"} handdleClick={addInput}></Button>
+          <Button value={"-"} handdleClick={addInput}></Button>
         </div>
         <div className='row'>
-          <Button value={"1"}></Button>
-          <Button value={"2"}></Button>
-          <Button value={"3"}></Button>
-          <Button value={"+"}></Button>
+          <Button value={"1"} handdleClick={addInput}></Button>
+          <Button value={"2"} handdleClick={addInput}></Button>
+          <Button value={"3"} handdleClick={addInput}></Button>
+          <Button value={"+"} handdleClick={addInput}></Button>
         </div>
         <div className='row'>
           <div className='zeroContainer'>
-            <Button value={"0"}></Button>
+            <Button value={"0"} handdleClick={addInput}></Button>
           </div>
           <div className='equalContainer'>
-            <Button value={"."}></Button>
-            <Button value={"="}></Button>
+            <Button value={"."} handdleClick={addInput}></Button>
+            <Button value={"="} handdleClick={addInput}></Button>
           </div>
         </div>
       </div>
