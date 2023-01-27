@@ -6,6 +6,7 @@ import Button from './components/common/Button/Button';
 import Display from './components/common/Display/Display';
 import { useState } from 'react';
 import ButtonAC from './components/common/ButtonAC/ButtonAC';
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -17,6 +18,14 @@ function App() {
 
   const handdleClear = () =>{
     setInput("")
+  }
+
+  const calculateResult = () =>{
+    if(input){
+      setInput(evaluate(input))
+    } else {
+      alert("Ingrese valores para realizar los calculos")
+    }
   }
 
 
@@ -34,13 +43,13 @@ function App() {
           <ButtonAC handdleClear={handdleClear} />
           <Button value={"±"} handdleClick={addInput}></Button>
           <Button value={"%"} handdleClick={addInput}></Button>
-          <Button value={"÷"} handdleClick={addInput}></Button>
+          <Button value={"/"} handdleClick={addInput}></Button>
         </div>
         <div className='row'>
           <Button value={"7"} handdleClick={addInput}></Button>
           <Button value={"8"} handdleClick={addInput}></Button>
           <Button value={"9"} handdleClick={addInput}></Button>
-          <Button value={"x"} handdleClick={addInput}></Button>
+          <Button value={"*"} handdleClick={addInput}></Button>
         </div>
         <div className='row'>
           <Button value={"4"} handdleClick={addInput}></Button>
@@ -60,7 +69,7 @@ function App() {
           </div>
           <div className='equalContainer'>
             <Button value={"."} handdleClick={addInput}></Button>
-            <Button value={"="} handdleClick={addInput}></Button>
+            <Button value={"="} handdleClick={calculateResult}></Button>
           </div>
         </div>
       </div>
