@@ -12,6 +12,7 @@ function App() {
 
   const [input, setInput] = useState("")
 
+
   const addInput = val =>{
     if ( 
       (
@@ -45,6 +46,10 @@ function App() {
     }
   }
 
+  const changeSimbol = () => {
+    setInput(`-(${input})`)
+  }
+
 
   return (
     <div className="App">
@@ -58,7 +63,7 @@ function App() {
       <div className='calculatorContainer'>
         <div className='row'>
           <ButtonAC handdleClear={handdleClear} />
-          <Button value={"±"} handdleClick={addInput}></Button>
+          <Button value={"±"} handdleClick={changeSimbol}></Button>
           <Button value={"%"} handdleClick={addInput}></Button>
           <Button value={"/"} handdleClick={addInput}></Button>
         </div>
