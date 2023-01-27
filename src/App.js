@@ -13,8 +13,25 @@ function App() {
   const [input, setInput] = useState("")
 
   const addInput = val =>{
-    setInput(input + val)
+    if ( 
+      (
+      input.slice(-1) === "/" ||
+      input.slice(-1) === "*" ||
+      input.slice(-1) === "-" ||
+      input.slice(-1) === "+"
+      ) && (
+      val === "/" ||
+      val === "*" ||
+      val === "-" ||
+      val === "+"
+      ) 
+      ){
+      return
+    } else {
+      setInput(input + val)
+    }
   }
+
 
   const handdleClear = () =>{
     setInput("")
